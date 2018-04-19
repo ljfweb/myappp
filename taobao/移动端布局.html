@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--视口    宽度=设备宽度   初始缩放比例1  最小缩放1 最大缩放1 用户操作禁用 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style type="text/css">
+		*{margin: 0 ; padding: 0;}
+		ul{
+			width: 100%;
+		}
+		ul li{
+			width: 20%;
+			height: 100px;
+			background: skyblue;
+			border: 1px solid #000;
+			float: left;
+			list-style: none;
+			margin-left: 3%;
+		}
+		/*li{
+			width: 1.5rem;
+			height: 0.8rem;
+		}
+		*/
+		#header{
+			width: 100%;
+		}
+		.header_left{
+			width: 2.9rem;
+			height: 0.8rem;
+			background: darkcyan;
+			font-size:14px;
+			margin-left: 0.29rem;
+			float:left;
+		}
+		.header_right{
+			float:right;
+			width: 3.03rem;
+			height: 0.8rem;
+			background: skyblue;
+			font-size: 14px;
+			margin-right: 0.25rem;
+		}
+	</style>
+	<body>
+		
+		<h1>移动端布局--自适应布局</h1>
+		<!--
+			1.百分比布局
+			2,rem布局---主用
+			3.flex布局
+		-->
+		
+		<!--<ul>
+			<li>
+				
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<div id="header">
+			<div class="header_left">三新大厦</div>
+			<div class="header_right">多云</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		html的fontSize  16px   1rem=16px 
+//						32px  rem =32px
+		//rem布局  rem的大小是由html的font-size来决定的
+			//当屏幕变大的时候 变大html元素的fontSize
+			//工作 根据设计图工作
+			//让1rem=100px 
+			// 640--5s    750--6s
+			document.documentElement.style.fontSize=window.innerWidth/12.42+"px";
+			
+			window.onresize=function(){
+				document.documentElement.style.fontSize=window.innerWidth/12.42+"px";
+			}
+			
+		
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.swiper-container{
+			height: 500px;
+			background: skyblue;
+		}
+		.swiper-container img{
+			width: 100%;
+			height: 500px;
+		}
+	</style>
+	<body>
+		<!--用做移动端的布局--主要是轮播-->
+		<div class="swiper-container">
+			<!--图片-->
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			    	<img src="taobao/carouselBox61.jpg"/>
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="taobao/carouselBox62.jpg"/>
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="taobao/carouselBox63.jpg"/>
+			    </div>
+			  </div>
+			  <!--分页-->
+		  	 <div class="swiper-pagination"></div>
+		  	 <!--前后按钮-->
+		  	 <div class="swiper-button-prev"></div>
+   			 <div class="swiper-button-next"></div>
+		</div>
+		
+		
+	</body>
+	
+	<script> 
+		var mySwiper = new Swiper('.swiper-container', {
+			//配置sweiper的选项
+			autoplay: 2000,//可选选项，自动滑动
+			direction:'horizontal',//切换方向
+			speed:2000,//切换速度
+			loop :true,//循环播放
+			pagination :'.swiper-pagination',//分页器的配置
+			paginationClickable:true,//分页器是否可点击
+			prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+			//切换完成事件
+			onTouchEnd:function(swiper){
+				
+//				swiper.activeIndex 当前激活的下标
+				console.log(swiper.activeIndex)
+				alert('切换完成');
+			}
+			
+		})
+		</script>
+	
+</html>
